@@ -1,0 +1,28 @@
+int Solution::solve(vector<string> &A) {
+   
+    int n = A.size();
+   
+    set<char> s;
+   
+    for(int i = 0; i < n; i++){
+        // for(auto letter : A[i]){
+        //     s.insert(letter);
+        // }
+        //or below
+        // Iterate over each character in the current string
+       
+            for(int j = 0; j < A[i].size(); j++) {
+                char ch = tolower(A[i][j]); // Convert to lowercase
+                if(isalpha(ch)) { // Ensure it's an alphabet character
+                    s.insert(ch);
+                }
+            }
+        }
+
+    if(s.size() < 26){
+        return 0;
+    }
+    else {
+        return 1;
+    }
+ }
